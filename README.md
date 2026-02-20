@@ -72,12 +72,16 @@ The MLX Community hosts several optimized models for various use cases. You can 
 
 | Model ID | Best For... | RAM (Approx) |
 | :--- | :--- | :--- |
+| `mlx-community/Qwen2-VL-72B-Instruct-4bit` | **Ultimate Performance.** Highest accuracy available for MLX. | ~42GB+ |
+| `mlx-community/Pixtral-12B-4bit` | **Strong 12B Alternative.** Great for complex visual reasoning. | ~10GB |
 | `mlx-community/Qwen2.5-VL-7B-Instruct-4bit` | **State-of-the-Art Accuracy.** Best for complex reasoning and detail. | ~6.5GB |
 | `mlx-community/llava-v1.6-mistral-7b-4bit` | **Robust Baseline.** Good balance of speed and reliability. | ~6.0GB |
 | `mlx-community/paligemma-3b-mix-448-4bit` | **Speed & Edge Devices.** Faster inference with lower memory footprint. | ~3.5GB |
 | `mlx-community/Phi-3-vision-128k-instruct-4bit` | **Document Analysis.** Excellent for OCR and structured data extraction. | ~4.0GB |
 
 ### When to use which model?
+- **High-RAM Users (32GB/64GB+):** If you have an M1/M2/M3 Max or Ultra, use `Qwen2-VL-72B`. It rivals the best proprietary models (like GPT-4V) in vision reasoning but requires significant Unified Memory.
+- **Mid-Range Power (16GB+):** `Pixtral-12B` or `Qwen2.5-VL-7B` are excellent choices. They provide a noticeable jump in "intelligence" over 3B models while remaining very snappy.
 - **Detailed Image Analysis:** Use `Qwen2.5-VL-7B`. It has superior vision-language alignment and handles complex reasoning well.
 - **Reading Text or Documents (OCR):** `Phi-3-vision` is specifically tuned for high-resolution document processing and extracting structured data.
 - **Fast/Real-time Applications:** `PaliGemma-3B` is significantly lighter and offers much lower latency, making it ideal for responsiveness.
